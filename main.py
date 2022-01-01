@@ -70,7 +70,7 @@ class MyBot():
             query.message.reply_text('لطفا برنامه خود را دوباره بفرستید')             
 
         elif query.data in self.program_dict_numbers:
-            if len(self.keys4) > 1:
+            if len(self.keys4) > 2:
                 self.index = int(query.data) - 3
                 self.keys4.remove([InlineKeyboardButton(self.program_dict_numbers[query.data], callback_data=query.data)])
                 query.edit_message_text('برنامه امروز شما', reply_markup=self.key5)
